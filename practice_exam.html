@@ -1,0 +1,909 @@
+<!--
+  Nurse Practitioner Practice Exam
+  This HTML document contains 100 multiple‑choice questions covering
+  immunology, hematology, cardiovascular, pulmonary, urinary/renal and
+  endocrine topics relevant to nurse practitioner board exams.
+  Each question has four answer choices.  The correct answer is
+  indicated by the data‑correct attribute on the corresponding radio
+  button.  When the user clicks the "Submit" button, a JavaScript
+  function calculates the total score, highlights the correct and
+  incorrect responses, and displays feedback.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nurse Practitioner Practice Exam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .question p {
+      margin: 0 0 10px 0;
+    }
+    .question label {
+      display: block;
+      margin-left: 20px;
+    }
+    .correct {
+      background-color: #d4edda;
+    }
+    .incorrect {
+      background-color: #f8d7da;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nurse Practitioner Practice Exam</h1>
+  <p>Please answer each of the following multiple‑choice questions.  Select the best answer for each item.  When finished, click the Submit button to receive your score and review the correct answers.</p>
+  <div id="exam">
+    <!-- Questions begin here -->
+    <div class="question">
+      <p><strong>1.</strong> Type I hypersensitivity reactions occur when immunoglobulin E (IgE) antibodies bind to mast cells and basophils.  On re‑exposure to the antigen, cross‑linking of IgE leads to rapid degranulation and release of mediators such as histamine.  Which of the following is a typical clinical effect of this reaction?</p>
+      <label><input type="radio" name="q1" value="A" data-correct="false"> Immune complex deposition causing nephritis and arthritis</label>
+      <label><input type="radio" name="q1" value="B" data-correct="true"> Vasodilation and bronchoconstriction leading to hypotension and wheezing</label>
+      <label><input type="radio" name="q1" value="C" data-correct="false"> Delayed erythema and induration mediated by CD4 T cells</label>
+      <label><input type="radio" name="q1" value="D" data-correct="false"> Anti‑receptor antibodies causing organ‑specific stimulation</label>
+    </div>
+
+    <div class="question">
+      <p><strong>2.</strong> Anaphylaxis following a bee sting is treated emergently with intramuscular epinephrine.  Why is epinephrine considered the first‑line therapy for life‑threatening allergic reactions?</p>
+      <label><input type="radio" name="q2" value="A" data-correct="false"> It gradually reverses immune complex deposition over days</label>
+      <label><input type="radio" name="q2" value="B" data-correct="false"> It neutralizes circulating IgG autoantibodies</label>
+      <label><input type="radio" name="q2" value="C" data-correct="true"> It rapidly counteracts vasodilation and bronchospasm and is the only medication proven to stop anaphylaxis</label>
+      <label><input type="radio" name="q2" value="D" data-correct="false"> It suppresses T‑cell proliferation over weeks</label>
+    </div>
+
+    <div class="question">
+      <p><strong>3.</strong> Type II hypersensitivity reactions involve antibodies directed against antigens on cell surfaces or extracellular matrix proteins.  Binding of IgG or IgM triggers complement activation and cell destruction.  Which of the following disorders is an example of a type II hypersensitivity reaction?</p>
+      <label><input type="radio" name="q3" value="A" data-correct="false"> Allergic asthma due to dust mite exposure</label>
+      <label><input type="radio" name="q3" value="B" data-correct="true"> Autoimmune hemolytic anemia causing jaundice and anemia</label>
+      <label><input type="radio" name="q3" value="C" data-correct="false"> Systemic lupus erythematosus with immune complex–mediated vasculitis</label>
+      <label><input type="radio" name="q3" value="D" data-correct="false"> Contact dermatitis from poison ivy exposure</label>
+    </div>
+
+    <div class="question">
+      <p><strong>4.</strong> Type III hypersensitivity results from deposition of circulating antigen–antibody complexes in tissues.  Activation of complement recruits neutrophils and causes inflammation.  Which clinical condition is most consistent with a type III mechanism?</p>
+      <label><input type="radio" name="q4" value="A" data-correct="false"> Grave’s disease with thyroid‑stimulating immunoglobulins</label>
+      <label><input type="radio" name="q4" value="B" data-correct="false"> Contact dermatitis due to nickel jewelry</label>
+      <label><input type="radio" name="q4" value="C" data-correct="true"> Serum sickness after exposure to foreign proteins resulting in fever, rash and arthralgias</label>
+      <label><input type="radio" name="q4" value="D" data-correct="false"> Hemolytic anemia due to antidrug antibodies</label>
+    </div>
+
+    <div class="question">
+      <p><strong>5.</strong> Type IV hypersensitivity is a delayed T‑cell–mediated response.  Sensitized T lymphocytes and macrophages orchestrate a cellular infiltrate, and granulomas may form if the antigen persists.  Which of the following best exemplifies a type IV hypersensitivity reaction?</p>
+      <label><input type="radio" name="q5" value="A" data-correct="false"> Pernicious anemia due to intrinsic factor antibodies</label>
+      <label><input type="radio" name="q5" value="B" data-correct="false"> Serum sickness following immunoglobulin therapy</label>
+      <label><input type="radio" name="q5" value="C" data-correct="true"> Positive purified protein derivative (PPD) skin test with induration 48 hours after tuberculin injection</label>
+      <label><input type="radio" name="q5" value="D" data-correct="false"> Immediate hives after peanut exposure</label>
+    </div>
+
+    <div class="question">
+      <p><strong>6.</strong> A 32‑year‑old woman presents with weight loss, heat intolerance, tremors and exophthalmos.  Laboratory testing shows suppressed thyroid‑stimulating hormone (TSH) and elevated free T<sub>3</sub>.  Which of the following best explains the pathophysiology of her condition?</p>
+      <label><input type="radio" name="q6" value="A" data-correct="false"> Autoimmune destruction of thyroid follicular cells by cytotoxic T cells</label>
+      <label><input type="radio" name="q6" value="B" data-correct="false"> Pituitary adenoma producing excess TSH</label>
+      <label><input type="radio" name="q6" value="C" data-correct="true"> IgG autoantibodies stimulate the TSH receptor causing unregulated excess thyroid hormone production</label>
+      <label><input type="radio" name="q6" value="D" data-correct="false"> Immune complexes deposit in the thyroid causing inflammatory destruction</label>
+    </div>
+
+    <div class="question">
+      <p><strong>7.</strong> A patient with systemic lupus erythematosus (SLE) experiences fatigue, symmetric polyarthritis and a malar rash.  Which autoantibody is most specific for SLE and correlates with disease activity, especially renal involvement?</p>
+      <label><input type="radio" name="q7" value="A" data-correct="false"> Anticentromere antibody</label>
+      <label><input type="radio" name="q7" value="B" data-correct="false"> Antinuclear antibody (ANA)</label>
+      <label><input type="radio" name="q7" value="C" data-correct="true"> Anti–double‑stranded DNA antibody</label>
+      <label><input type="radio" name="q7" value="D" data-correct="false"> Antineutrophil cytoplasmic antibody (ANCA)</label>
+    </div>
+
+    <div class="question">
+      <p><strong>8.</strong> Which of the following best describes the major pathophysiologic mechanism of HIV infection?</p>
+      <label><input type="radio" name="q8" value="A" data-correct="false"> IgM autoantibodies bind to red blood cells causing hemolysis</label>
+      <label><input type="radio" name="q8" value="B" data-correct="true"> Viral gp120 binds to CD4 receptors and co‑receptors on T helper cells, allowing entry; reverse transcriptase converts RNA to DNA which integrates into the host genome</label>
+      <label><input type="radio" name="q8" value="C" data-correct="false"> Excessive secretion of thyroid hormone due to autoantibody stimulation</label>
+      <label><input type="radio" name="q8" value="D" data-correct="false"> T‑cell–mediated destruction of pancreatic β cells</label>
+    </div>
+
+    <div class="question">
+      <p><strong>9.</strong> Common variable immunodeficiency (CVID) is an example of a primary immunodeficiency.  Which of the following best characterizes CVID?</p>
+      <label><input type="radio" name="q9" value="A" data-correct="false"> Defective neutrophil oxidative burst leading to recurrent catalase‑positive infections</label>
+      <label><input type="radio" name="q9" value="B" data-correct="false"> Autosomal recessive absence of B cells due to a Bruton's tyrosine kinase mutation</label>
+      <label><input type="radio" name="q9" value="C" data-correct="true"> Impaired B‑cell differentiation with low IgG and low IgA/IgM causing recurrent sinopulmonary infections and autoimmunity</label>
+      <label><input type="radio" name="q9" value="D" data-correct="false"> HIV infection causing depletion of CD4 T cells</label>
+    </div>
+
+    <div class="question">
+      <p><strong>10.</strong> Alloimmunity refers to immune reactions against antigens from genetically different individuals of the same species.  Which of the following is an example of an alloimmune condition?</p>
+      <label><input type="radio" name="q10" value="A" data-correct="false"> Grave’s disease causing hyperthyroidism</label>
+      <label><input type="radio" name="q10" value="B" data-correct="false"> Type 1 diabetes mellitus</label>
+      <label><input type="radio" name="q10" value="C" data-correct="true"> Acute rejection of a transplanted kidney due to host T‑cell recognition of donor MHC antigens</label>
+      <label><input type="radio" name="q10" value="D" data-correct="false"> Pernicious anemia</label>
+    </div>
+
+    <!-- Hematology questions -->
+    <div class="question">
+      <p><strong>11.</strong> Microcytic anemia (MCV &lt;80 fL) is typically caused by impaired hemoglobin synthesis.  Which of the following is a common cause of microcytic anemia?</p>
+      <label><input type="radio" name="q11" value="A" data-correct="false"> Vitamin B<sub>12</sub> deficiency</label>
+      <label><input type="radio" name="q11" value="B" data-correct="false"> Chronic kidney disease with decreased erythropoietin</label>
+      <label><input type="radio" name="q11" value="C" data-correct="true"> Iron deficiency due to chronic blood loss</label>
+      <label><input type="radio" name="q11" value="D" data-correct="false"> Aplastic anemia from bone marrow failure</label>
+    </div>
+
+    <div class="question">
+      <p><strong>12.</strong> Normocytic anemia (MCV 80–95 fL) may be caused by decreased production or increased destruction of red blood cells.  Which of the following laboratory findings supports a diagnosis of hemolytic anemia?</p>
+      <label><input type="radio" name="q12" value="A" data-correct="false"> Low lactate dehydrogenase (LDH)</label>
+      <label><input type="radio" name="q12" value="B" data-correct="false"> Low indirect bilirubin</label>
+      <label><input type="radio" name="q12" value="C" data-correct="true"> Elevated LDH, elevated indirect bilirubin and decreased haptoglobin</label>
+      <label><input type="radio" name="q12" value="D" data-correct="false"> Low reticulocyte count</label>
+    </div>
+
+    <div class="question">
+      <p><strong>13.</strong> Macrocytic anemia (MCV &gt;100 fL) can be megaloblastic or non‑megaloblastic.  What is the most common cause of megaloblastic anemia, characterized by macro‑ovalocytes and hypersegmented neutrophils?</p>
+      <label><input type="radio" name="q13" value="A" data-correct="true"> Vitamin B<sub>12</sub> or folate deficiency impairing DNA synthesis</label>
+      <label><input type="radio" name="q13" value="B" data-correct="false"> Iron deficiency leading to small pale red cells</label>
+      <label><input type="radio" name="q13" value="C" data-correct="false"> Hemolysis due to G6PD deficiency</label>
+      <label><input type="radio" name="q13" value="D" data-correct="false"> Chronic kidney disease causing decreased EPO production</label>
+    </div>
+
+    <div class="question">
+      <p><strong>14.</strong> Anemia of chronic disease is a normocytic or mildly microcytic anemia associated with chronic inflammation.  Which statement best describes the pathophysiology of anemia of chronic disease?</p>
+      <label><input type="radio" name="q14" value="A" data-correct="false"> Autoimmune destruction of red blood cell precursors</label>
+      <label><input type="radio" name="q14" value="B" data-correct="true"> Inflammatory cytokines increase hepcidin, which sequesters iron in macrophages and reduces iron absorption, leading to impaired erythropoiesis</label>
+      <label><input type="radio" name="q14" value="C" data-correct="false"> Vitamin B<sub>12</sub> deficiency causing impaired DNA synthesis</label>
+      <label><input type="radio" name="q14" value="D" data-correct="false"> Alpha‑globin gene deletion causing thalassemia</label>
+    </div>
+
+    <div class="question">
+      <p><strong>15.</strong> Sickle cell disease is caused by a point mutation in the β‑globin gene leading to hemoglobin S.  Under hypoxic conditions, HbS polymerizes, causing red cells to deform into a sickle shape.  Which of the following contributes to the clinical manifestations of sickle cell disease?</p>
+      <label><input type="radio" name="q15" value="A" data-correct="false"> Red blood cells have a normal lifespan of 120 days</label>
+      <label><input type="radio" name="q15" value="B" data-correct="true"> Sickled cells occlude small vessels causing painful vaso‑occlusive crises and have a shortened lifespan leading to chronic hemolytic anemia</label>
+      <label><input type="radio" name="q15" value="C" data-correct="false"> Production of HbA compensates for the mutation</label>
+      <label><input type="radio" name="q15" value="D" data-correct="false"> The mutation increases oxygen affinity and prevents tissue hypoxia</label>
+    </div>
+
+    <div class="question">
+      <p><strong>16.</strong> Erythropoietin (EPO) is produced primarily in the kidneys.  What stimulates EPO secretion, and how does it affect red blood cell production?</p>
+      <label><input type="radio" name="q16" value="A" data-correct="false"> High serum iron stimulates EPO, which increases platelet production</label>
+      <label><input type="radio" name="q16" value="B" data-correct="true"> Low oxygen tension in the kidney stimulates EPO release, which promotes proliferation and differentiation of erythroid precursors in the bone marrow</label>
+      <label><input type="radio" name="q16" value="C" data-correct="false"> Elevated bilirubin stimulates EPO secretion for leukocyte production</label>
+      <label><input type="radio" name="q16" value="D" data-correct="false"> High hemoglobin levels stimulate EPO to suppress RBC production</label>
+    </div>
+
+    <div class="question">
+      <p><strong>17.</strong> Beta‑thalassemia major is a transfusion‑dependent anemia due to absent β‑globin chain synthesis.  In addition to transfusions, what therapy is used to prevent iron overload in these patients?</p>
+      <label><input type="radio" name="q17" value="A" data-correct="false"> Vitamin B<sub>12</sub> injections</label>
+      <label><input type="radio" name="q17" value="B" data-correct="false"> Erythropoietin analogs</label>
+      <label><input type="radio" name="q17" value="C" data-correct="false"> Daily aspirin therapy</label>
+      <label><input type="radio" name="q17" value="D" data-correct="true"> Iron chelation with deferoxamine or similar agents</label>
+    </div>
+
+    <div class="question">
+      <p><strong>18.</strong> Primary immunodeficiency diseases are often inherited; secondary immunodeficiency refers to acquired defects.  Which of the following is a secondary cause of immunodeficiency?</p>
+      <label><input type="radio" name="q18" value="A" data-correct="false"> X‑linked agammaglobulinemia</label>
+      <label><input type="radio" name="q18" value="B" data-correct="false"> Common variable immunodeficiency</label>
+      <label><input type="radio" name="q18" value="C" data-correct="false"> Severe combined immunodeficiency</label>
+      <label><input type="radio" name="q18" value="D" data-correct="true"> Immunosuppression from high‑dose corticosteroid therapy</label>
+    </div>
+
+    <!-- Cardiovascular questions -->
+    <div class="question">
+      <p><strong>19.</strong> Which of the following is a modifiable risk factor for coronary artery disease (CAD)?</p>
+      <label><input type="radio" name="q19" value="A" data-correct="false"> Age over 65 years</label>
+      <label><input type="radio" name="q19" value="B" data-correct="false"> Male sex</label>
+      <label><input type="radio" name="q19" value="C" data-correct="true"> Cigarette smoking</label>
+      <label><input type="radio" name="q19" value="D" data-correct="false"> Family history of premature CAD</label>
+    </div>
+
+    <div class="question">
+      <p><strong>20.</strong> High‑density lipoprotein (HDL) cholesterol is considered cardioprotective because it transports cholesterol from peripheral tissues to the liver.  Which of the following lipid profiles is most consistent with a desirable pattern in adults?</p>
+      <label><input type="radio" name="q20" value="A" data-correct="false"> Total cholesterol 250 mg/dL, LDL 170 mg/dL, HDL 30 mg/dL</label>
+      <label><input type="radio" name="q20" value="B" data-correct="true"> Total cholesterol <200 mg/dL, LDL <100 mg/dL, HDL ≥60 mg/dL</label>
+      <label><input type="radio" name="q20" value="C" data-correct="false"> Total cholesterol 220 mg/dL, LDL 140 mg/dL, HDL 25 mg/dL</label>
+      <label><input type="radio" name="q20" value="D" data-correct="false"> Total cholesterol 200 mg/dL, LDL 130 mg/dL, HDL 40 mg/dL</label>
+    </div>
+
+    <div class="question">
+      <p><strong>21.</strong> Which of the following genetic disorders causes markedly elevated low‑density lipoprotein (LDL) levels from birth and predisposes individuals to early‑onset atherosclerosis?</p>
+      <label><input type="radio" name="q21" value="A" data-correct="false"> Familial chylomicronemia due to lipoprotein lipase deficiency</label>
+      <label><input type="radio" name="q21" value="B" data-correct="true"> Familial hypercholesterolemia due to LDL receptor mutations</label>
+      <label><input type="radio" name="q21" value="C" data-correct="false"> Dysbetalipoproteinemia from ApoE defect</label>
+      <label><input type="radio" name="q21" value="D" data-correct="false"> Familial hypertriglyceridemia due to ApoCII deficiency</label>
+    </div>
+
+    <div class="question">
+      <p><strong>22.</strong> In chronic heart failure with reduced ejection fraction (HFrEF), neurohormonal activation leads to progressive ventricular remodeling.  Which of the following pharmacologic agents is recommended for all Stage C HFrEF patients to reduce mortality and hospitalizations?</p>
+      <label><input type="radio" name="q22" value="A" data-correct="false"> Short‑acting nitrates only as needed</label>
+      <label><input type="radio" name="q22" value="B" data-correct="false"> ACE inhibitor or ARB without beta‑blocker</label>
+      <label><input type="radio" name="q22" value="C" data-correct="true"> Combination of an ACE inhibitor (or ARNI), evidence‑based beta‑blocker and mineralocorticoid receptor antagonist</label>
+      <label><input type="radio" name="q22" value="D" data-correct="false"> Only diuretics for symptom relief</label>
+    </div>
+
+    <div class="question">
+      <p><strong>23.</strong> What symptom is characteristic of left‑sided heart failure?</p>
+      <label><input type="radio" name="q23" value="A" data-correct="false"> Jugular venous distension and peripheral edema</label>
+      <label><input type="radio" name="q23" value="B" data-correct="true"> Dyspnea on exertion and orthopnea due to pulmonary congestion</label>
+      <label><input type="radio" name="q23" value="C" data-correct="false"> Abdominal ascites and hepatomegaly</label>
+      <label><input type="radio" name="q23" value="D" data-correct="false"> Syncope due to carotid sinus hypersensitivity</label>
+    </div>
+
+    <div class="question">
+      <p><strong>24.</strong> In the New York Heart Association (NYHA) functional classification of heart failure, which class describes patients with symptoms of heart failure at rest?</p>
+      <label><input type="radio" name="q24" value="A" data-correct="false"> Class I: No limitation of physical activity</label>
+      <label><input type="radio" name="q24" value="B" data-correct="false"> Class II: Slight limitation; symptoms with ordinary activity</label>
+      <label><input type="radio" name="q24" value="C" data-correct="false"> Class III: Marked limitation; symptoms with less‑than‑ordinary activity</label>
+      <label><input type="radio" name="q24" value="D" data-correct="true"> Class IV: Symptoms at rest</label>
+    </div>
+
+    <div class="question">
+      <p><strong>25.</strong> Which heart valve disorder is classically associated with a crescendo–decrescendo systolic murmur best heard at the right upper sternal border and radiating to the carotid arteries?</p>
+      <label><input type="radio" name="q25" value="A" data-correct="true"> Aortic stenosis</label>
+      <label><input type="radio" name="q25" value="B" data-correct="false"> Aortic regurgitation</label>
+      <label><input type="radio" name="q25" value="C" data-correct="false"> Mitral stenosis</label>
+      <label><input type="radio" name="q25" value="D" data-correct="false"> Mitral regurgitation</label>
+    </div>
+
+    <div class="question">
+      <p><strong>26.</strong> A 70‑year‑old man presents with dyspnea, orthopnea and palpitations.  Auscultation reveals a high‑pitched blowing diastolic murmur at the left sternal border.  Which valvular pathology best explains these findings?</p>
+      <label><input type="radio" name="q26" value="A" data-correct="false"> Aortic stenosis</label>
+      <label><input type="radio" name="q26" value="B" data-correct="true"> Aortic regurgitation causing backflow of blood into the left ventricle during diastole</label>
+      <label><input type="radio" name="q26" value="C" data-correct="false"> Mitral stenosis</label>
+      <label><input type="radio" name="q26" value="D" data-correct="false"> Tricuspid regurgitation</label>
+    </div>
+
+    <div class="question">
+      <p><strong>27.</strong> Mitral stenosis most often results from rheumatic heart disease and produces an opening snap followed by a diastolic rumbling murmur.  Which physiologic change occurs as the stenosis becomes severe?</p>
+      <label><input type="radio" name="q27" value="A" data-correct="false"> Decreased left atrial pressure and increased ejection fraction</label>
+      <label><input type="radio" name="q27" value="B" data-correct="true"> Marked elevation of left atrial pressure leading to pulmonary hypertension and right heart failure</label>
+      <label><input type="radio" name="q27" value="C" data-correct="false"> Increased forward flow causing high pulse pressure</label>
+      <label><input type="radio" name="q27" value="D" data-correct="false"> Decreased risk of atrial fibrillation</label>
+    </div>
+
+    <div class="question">
+      <p><strong>28.</strong> A 52‑year‑old woman presents with dyspnea, palpitations and a holosystolic murmur at the apex radiating to the axilla.  The murmur is consistent with which valvular abnormality?</p>
+      <label><input type="radio" name="q28" value="A" data-correct="false"> Aortic stenosis</label>
+      <label><input type="radio" name="q28" value="B" data-correct="false"> Mitral stenosis</label>
+      <label><input type="radio" name="q28" value="C" data-correct="true"> Mitral regurgitation causing backflow of blood from the left ventricle into the left atrium during systole</label>
+      <label><input type="radio" name="q28" value="D" data-correct="false"> Pulmonic stenosis</label>
+    </div>
+
+    <div class="question">
+      <p><strong>29.</strong> Which of the following is a nonmodifiable risk factor for coronary artery disease?</p>
+      <label><input type="radio" name="q29" value="A" data-correct="false"> Smoking</label>
+      <label><input type="radio" name="q29" value="B" data-correct="false"> Hypertension</label>
+      <label><input type="radio" name="q29" value="C" data-correct="true"> Family history of premature CAD</label>
+      <label><input type="radio" name="q29" value="D" data-correct="false"> Dyslipidemia</label>
+    </div>
+
+    <!-- Pulmonary questions -->
+    <div class="question">
+      <p><strong>30.</strong> Which of the following best distinguishes obstructive from restrictive lung diseases on pulmonary function testing (PFT)?</p>
+      <label><input type="radio" name="q30" value="A" data-correct="true"> Obstructive disease shows reduced FEV<sub>1</sub>/FVC ratio &lt;70% with increased total lung capacity, whereas restrictive disease shows preserved or increased FEV<sub>1</sub>/FVC with reduced total lung capacity</label>
+      <label><input type="radio" name="q30" value="B" data-correct="false"> Obstructive disease shows reduced FEV<sub>1</sub>/FVC with reduced TLC, whereas restrictive disease shows increased FEV<sub>1</sub>/FVC with increased TLC</label>
+      <label><input type="radio" name="q30" value="C" data-correct="false"> Obstructive and restrictive diseases cannot be distinguished by PFTs</label>
+      <label><input type="radio" name="q30" value="D" data-correct="false"> Restrictive disease has a decreased FEV<sub>1</sub>/FVC with increased residual volume</label>
+    </div>
+
+    <div class="question">
+      <p><strong>31.</strong> Chronic bronchitis is defined by a productive cough for at least three months in two consecutive years.  Which of the following pathophysiologic changes is characteristic of chronic bronchitis?</p>
+      <label><input type="radio" name="q31" value="A" data-correct="false"> Permanent dilation and destruction of alveoli without fibrosis</label>
+      <label><input type="radio" name="q31" value="B" data-correct="true"> Hyperplasia of goblet cells and mucus glands leading to mucus hypersecretion and airway obstruction</label>
+      <label><input type="radio" name="q31" value="C" data-correct="false"> Destruction of alpha‑1 antitrypsin resulting in lung compliance increase</label>
+      <label><input type="radio" name="q31" value="D" data-correct="false"> Fibrosing interstitial pneumonia affecting distal acini</label>
+    </div>
+
+    <div class="question">
+      <p><strong>32.</strong> Emphysema leads to permanent enlargement of airspaces distal to the terminal bronchiole and destruction of their walls.  Which risk factor is most strongly associated with the development of centrilobular (centrilobular) emphysema?</p>
+      <label><input type="radio" name="q32" value="A" data-correct="true"> Cigarette smoking</label>
+      <label><input type="radio" name="q32" value="B" data-correct="false"> Occupational silica exposure</label>
+      <label><input type="radio" name="q32" value="C" data-correct="false"> Alpha‑1 antitrypsin deficiency</label>
+      <label><input type="radio" name="q32" value="D" data-correct="false"> Asbestos exposure</label>
+    </div>
+
+    <div class="question">
+      <p><strong>33.</strong> Panacinar emphysema affecting the entire acinus is classically associated with which inherited disorder?</p>
+      <label><input type="radio" name="q33" value="A" data-correct="false"> Marfan syndrome</label>
+      <label><input type="radio" name="q33" value="B" data-correct="true"> Alpha‑1 antitrypsin deficiency</label>
+      <label><input type="radio" name="q33" value="C" data-correct="false"> Alpha thalassemia</label>
+      <label><input type="radio" name="q33" value="D" data-correct="false"> Beta‑thalassemia minor</label>
+    </div>
+
+    <div class="question">
+      <p><strong>34.</strong> Asthma is a chronic inflammatory airway disease often triggered by allergens.  Which cytokine profile is associated with the TH2‑mediated immune response seen in allergic asthma?</p>
+      <label><input type="radio" name="q34" value="A" data-correct="false"> Interleukin‑2 and interferon‑γ (TH1 pattern)</label>
+      <label><input type="radio" name="q34" value="B" data-correct="true"> Interleukin‑4/IL‑13 promote IgE class switching and IL‑5 recruits eosinophils</label>
+      <label><input type="radio" name="q34" value="C" data-correct="false"> Tumor necrosis factor‑α and IL‑17</label>
+      <label><input type="radio" name="q34" value="D" data-correct="false"> TGF‑β and IL‑10</label>
+    </div>
+
+    <div class="question">
+      <p><strong>35.</strong> Which medication is considered first‑line maintenance therapy for persistent asthma because it reduces airway inflammation and prevents exacerbations?</p>
+      <label><input type="radio" name="q35" value="A" data-correct="false"> Short‑acting β<sub>2</sub> agonist (albuterol) inhaled as needed</label>
+      <label><input type="radio" name="q35" value="B" data-correct="true"> Daily inhaled corticosteroid</label>
+      <label><input type="radio" name="q35" value="C" data-correct="false"> Oral theophylline monotherapy</label>
+      <label><input type="radio" name="q35" value="D" data-correct="false"> Intravenous magnesium sulfate</label>
+    </div>
+
+    <div class="question">
+      <p><strong>36.</strong> A 45‑year‑old man with asthma presents with worsening wheezing and shortness of breath.  He has used his albuterol inhaler 6 times in the last 24 hours.  On exam he is using accessory muscles, has diffuse expiratory wheezes and pulsus paradoxus.  Which of the following is the most appropriate next step in management?</p>
+      <label><input type="radio" name="q36" value="A" data-correct="false"> Discontinue all medications and observe</label>
+      <label><input type="radio" name="q36" value="B" data-correct="false"> Begin an oral antihistamine only</label>
+      <label><input type="radio" name="q36" value="C" data-correct="true"> Administer nebulized short‑acting β<sub>2</sub> agonist and anticholinergic plus systemic corticosteroids and oxygen</label>
+      <label><input type="radio" name="q36" value="D" data-correct="false"> Start a long‑acting β<sub>2</sub> agonist without steroids</label>
+    </div>
+
+    <div class="question">
+      <p><strong>37.</strong> Which of the following exam findings is characteristic of idiopathic pulmonary fibrosis (a type of interstitial lung disease)?</p>
+      <label><input type="radio" name="q37" value="A" data-correct="false"> Diffuse wheezing and prolonged expiration</label>
+      <label><input type="radio" name="q37" value="B" data-correct="false"> Increased tactile fremitus and dullness to percussion</label>
+      <label><input type="radio" name="q37" value="C" data-correct="true"> Fine bibasilar “Velcro” crackles and digital clubbing</label>
+      <label><input type="radio" name="q37" value="D" data-correct="false"> Hyperresonant percussion with decreased breath sounds</label>
+    </div>
+
+    <div class="question">
+      <p><strong>38.</strong> Which of the following statements best describes the pathophysiology of idiopathic pulmonary fibrosis?</p>
+      <label><input type="radio" name="q38" value="A" data-correct="false"> Permanent dilation of bronchi due to chronic infection</label>
+      <label><input type="radio" name="q38" value="B" data-correct="false"> Neutrophilic inflammation and mucus hypersecretion</label>
+      <label><input type="radio" name="q38" value="C" data-correct="true"> Chronic interstitial inflammation leads to fibroblast proliferation, collagen deposition and loss of lung compliance</label>
+      <label><input type="radio" name="q38" value="D" data-correct="false"> Destruction of type II alveolar cells leading to surfactant deficiency</label>
+    </div>
+
+    <!-- Urinary and renal questions -->
+    <div class="question">
+      <p><strong>39.</strong> Uncomplicated cystitis is most often caused by bacteria ascending from the urethra.  Which of the following is a typical symptom of acute cystitis?</p>
+      <label><input type="radio" name="q39" value="A" data-correct="true"> Dysuria with urinary frequency and urgency</label>
+      <label><input type="radio" name="q39" value="B" data-correct="false"> Flank pain with fever and costovertebral tenderness</label>
+      <label><input type="radio" name="q39" value="C" data-correct="false"> Hemoptysis and dyspnea</label>
+      <label><input type="radio" name="q39" value="D" data-correct="false"> Painless hematuria without systemic symptoms</label>
+    </div>
+
+    <div class="question">
+      <p><strong>40.</strong> Which of the following defines a complicated urinary tract infection (UTI)?</p>
+      <label><input type="radio" name="q40" value="A" data-correct="false"> UTI in a healthy, nonpregnant woman without structural abnormalities</label>
+      <label><input type="radio" name="q40" value="B" data-correct="false"> UTI in a 25‑year‑old woman after sexual intercourse</label>
+      <label><input type="radio" name="q40" value="C" data-correct="true"> UTI associated with pregnancy, structural abnormalities, indwelling catheters or immunosuppression</label>
+      <label><input type="radio" name="q40" value="D" data-correct="false"> UTI with a positive nitrite test only</label>
+    </div>
+
+    <div class="question">
+      <p><strong>41.</strong> Acute pyelonephritis results from bacterial infection of the renal pelvis and parenchyma.  Which of the following clinical features is most suggestive of acute pyelonephritis rather than simple cystitis?</p>
+      <label><input type="radio" name="q41" value="A" data-correct="false"> Dysuria and urinary frequency without fever</label>
+      <label><input type="radio" name="q41" value="B" data-correct="true"> High fever, chills and flank pain with costovertebral angle tenderness</label>
+      <label><input type="radio" name="q41" value="C" data-correct="false"> Cloudy urine with positive nitrite and leukocyte esterase</label>
+      <label><input type="radio" name="q41" value="D" data-correct="false"> Mild suprapubic discomfort only</label>
+    </div>
+
+    <div class="question">
+      <p><strong>42.</strong> Benign prostatic hyperplasia (BPH) causes lower urinary tract symptoms in older men.  Which of the following is a typical clinical manifestation of BPH?</p>
+      <label><input type="radio" name="q42" value="A" data-correct="false"> Acute dysuria and flank pain with fever</label>
+      <label><input type="radio" name="q42" value="B" data-correct="false"> Nocturnal enuresis in children</label>
+      <label><input type="radio" name="q42" value="C" data-correct="true"> Hesitancy, weak urinary stream, incomplete bladder emptying and nocturia</label>
+      <label><input type="radio" name="q42" value="D" data-correct="false"> Hematuria with flank pain</label>
+    </div>
+
+    <div class="question">
+      <p><strong>43.</strong> Risk factors for benign prostatic hyperplasia (BPH) include which of the following?</p>
+      <label><input type="radio" name="q43" value="A" data-correct="true"> Increasing age, family history, obesity and sedentary lifestyle</label>
+      <label><input type="radio" name="q43" value="B" data-correct="false"> Female sex and smoking history</label>
+      <label><input type="radio" name="q43" value="C" data-correct="false"> Diabetes insipidus</label>
+      <label><input type="radio" name="q43" value="D" data-correct="false"> Early adulthood</label>
+    </div>
+
+    <div class="question">
+      <p><strong>44.</strong> Which of the following medications is commonly prescribed for moderate BPH symptoms to relax prostatic smooth muscle and improve urinary flow?</p>
+      <label><input type="radio" name="q44" value="A" data-correct="false"> Thiazide diuretics</label>
+      <label><input type="radio" name="q44" value="B" data-correct="true"> Alpha‑1 adrenergic blockers such as tamsulosin</label>
+      <label><input type="radio" name="q44" value="C" data-correct="false"> Beta blockers</label>
+      <label><input type="radio" name="q44" value="D" data-correct="false"> ACE inhibitors</label>
+    </div>
+
+    <div class="question">
+      <p><strong>45.</strong> Renal calculi (kidney stones) are classified based on their composition.  Which type of stone is associated with urease‑producing bacteria and forms staghorn calculi?</p>
+      <label><input type="radio" name="q45" value="A" data-correct="false"> Calcium oxalate stones</label>
+      <label><input type="radio" name="q45" value="B" data-correct="false"> Uric acid stones</label>
+      <label><input type="radio" name="q45" value="C" data-correct="true"> Struvite (magnesium ammonium phosphate) stones</label>
+      <label><input type="radio" name="q45" value="D" data-correct="false"> Cystine stones</label>
+    </div>
+
+    <div class="question">
+      <p><strong>46.</strong> A patient presents with sudden onset severe flank pain radiating to the groin, hematuria and nausea.  Which of the following imaging modalities is considered the gold standard for diagnosing ureteral stones in most adult patients?</p>
+      <label><input type="radio" name="q46" value="A" data-correct="false"> Abdominal ultrasound alone</label>
+      <label><input type="radio" name="q46" value="B" data-correct="true"> Non‑contrast helical CT scan of the abdomen and pelvis</label>
+      <label><input type="radio" name="q46" value="C" data-correct="false"> Intravenous pyelography</label>
+      <label><input type="radio" name="q46" value="D" data-correct="false"> MRI of the abdomen</label>
+    </div>
+
+    <div class="question">
+      <p><strong>47.</strong> Which preventive measure is recommended for patients with a history of calcium oxalate kidney stones?</p>
+      <label><input type="radio" name="q47" value="A" data-correct="false"> Avoid all dietary calcium intake</label>
+      <label><input type="radio" name="q47" value="B" data-correct="false"> Reduce fluid intake to minimize urine volume</label>
+      <label><input type="radio" name="q47" value="C" data-correct="true"> Increase fluid intake to achieve a daily urine output &gt;2.5 L and limit high‑oxalate foods</label>
+      <label><input type="radio" name="q47" value="D" data-correct="false"> Follow a high‑protein, low‑citrate diet</label>
+    </div>
+
+    <div class="question">
+      <p><strong>48.</strong> Urge urinary incontinence is characterized by involuntary leakage accompanied by a sudden urge to void.  Which statement about urge incontinence is correct?</p>
+      <label><input type="radio" name="q48" value="A" data-correct="true"> It is due to detrusor overactivity and can be treated with bladder training and antimuscarinic medications</label>
+      <label><input type="radio" name="q48" value="B" data-correct="false"> It is caused by impaired bladder outlet due to BPH</label>
+      <label><input type="radio" name="q48" value="C" data-correct="false"> It is due to physical or cognitive inability to reach the toilet in time</label>
+      <label><input type="radio" name="q48" value="D" data-correct="false"> It is defined by continuous dribbling due to underactive detrusor muscle</label>
+    </div>
+
+    <div class="question">
+      <p><strong>49.</strong> Functional urinary incontinence occurs when a patient has normal urinary tract function but cannot reach the toilet in time.  Which of the following is a common risk factor for functional incontinence?</p>
+      <label><input type="radio" name="q49" value="A" data-correct="false"> Detrusor overactivity</label>
+      <label><input type="radio" name="q49" value="B" data-correct="false"> Chronic urinary tract infection</label>
+      <label><input type="radio" name="q49" value="C" data-correct="true"> Severe arthritis impairing mobility</label>
+      <label><input type="radio" name="q49" value="D" data-correct="false"> Benign prostatic hyperplasia</label>
+    </div>
+
+    <!-- Renal failure questions -->
+    <div class="question">
+      <p><strong>50.</strong> Acute kidney injury (AKI) is categorized as prerenal, intrinsic or postrenal.  Which laboratory finding is most consistent with prerenal azotemia?</p>
+      <label><input type="radio" name="q50" value="A" data-correct="false"> Urine specific gravity &lt;1.010 with muddy brown casts</label>
+      <label><input type="radio" name="q50" value="B" data-correct="false"> Fractional excretion of sodium (FeNa) &gt;2%</label>
+      <label><input type="radio" name="q50" value="C" data-correct="true"> BUN:creatinine ratio &gt;20:1 with FeNa &lt;1%</label>
+      <label><input type="radio" name="q50" value="D" data-correct="false"> Red blood cell casts in urine sediment</label>
+    </div>
+
+    <div class="question">
+      <p><strong>51.</strong> Intrinsic acute kidney injury due to acute tubular necrosis often follows ischemia or nephrotoxin exposure.  Which urine finding is characteristic of acute tubular necrosis?</p>
+      <label><input type="radio" name="q51" value="A" data-correct="false"> Concentrated urine with high osmolality</label>
+      <label><input type="radio" name="q51" value="B" data-correct="false"> Low fractional excretion of sodium (FeNa &lt;1%)</label>
+      <label><input type="radio" name="q51" value="C" data-correct="false"> White blood cell casts</label>
+      <label><input type="radio" name="q51" value="D" data-correct="true"> Muddy brown granular casts and FeNa &gt;2%</label>
+    </div>
+
+    <div class="question">
+      <p><strong>52.</strong> Postrenal acute kidney injury results from obstruction to urine outflow.  Which of the following could cause postrenal AKI?</p>
+      <label><input type="radio" name="q52" value="A" data-correct="false"> Acute glomerulonephritis</label>
+      <label><input type="radio" name="q52" value="B" data-correct="false"> Acute tubular necrosis</label>
+      <label><input type="radio" name="q52" value="C" data-correct="true"> Bilateral ureteral obstruction from kidney stones</label>
+      <label><input type="radio" name="q52" value="D" data-correct="false"> Hypovolemia from dehydration</label>
+    </div>
+
+    <div class="question">
+      <p><strong>53.</strong> Chronic kidney disease (CKD) is staged based on estimated glomerular filtration rate (eGFR).  Stage 5 CKD corresponds to which eGFR range?</p>
+      <label><input type="radio" name="q53" value="A" data-correct="false"> 90–120 mL/min/1.73 m²</label>
+      <label><input type="radio" name="q53" value="B" data-correct="false"> 60–89 mL/min/1.73 m²</label>
+      <label><input type="radio" name="q53" value="C" data-correct="false"> 30–59 mL/min/1.73 m²</label>
+      <label><input type="radio" name="q53" value="D" data-correct="true"> &lt;15 mL/min/1.73 m² (end‑stage renal disease)</label>
+    </div>
+
+    <div class="question">
+      <p><strong>54.</strong> Which of the following complications of chronic kidney disease is due to decreased synthesis of 1,25‑dihydroxy vitamin D and phosphate retention, resulting in hypocalcemia and secondary hyperparathyroidism?</p>
+      <label><input type="radio" name="q54" value="A" data-correct="false"> Uremic pericarditis</label>
+      <label><input type="radio" name="q54" value="B" data-correct="true"> Renal osteodystrophy causing bone pain and fractures</label>
+      <label><input type="radio" name="q54" value="C" data-correct="false"> Hypernatremia and fluid overload</label>
+      <label><input type="radio" name="q54" value="D" data-correct="false"> Hyperaldosteronism</label>
+    </div>
+
+    <div class="question">
+      <p><strong>55.</strong> Azotemia refers to elevation of blood urea nitrogen (BUN) and creatinine levels.  When azotemia leads to clinical signs and symptoms such as nausea, pruritus, pericardial friction rub and encephalopathy, it is termed:</p>
+      <label><input type="radio" name="q55" value="A" data-correct="true"> Uremia</label>
+      <label><input type="radio" name="q55" value="B" data-correct="false"> Hyperkalemia</label>
+      <label><input type="radio" name="q55" value="C" data-correct="false"> Anuria</label>
+      <label><input type="radio" name="q55" value="D" data-correct="false"> Polyuria</label>
+    </div>
+
+    <div class="question">
+      <p><strong>56.</strong> Which pharmacologic agent slows progression of chronic kidney disease and reduces proteinuria by decreasing intraglomerular pressure?</p>
+      <label><input type="radio" name="q56" value="A" data-correct="false"> Proton pump inhibitor</label>
+      <label><input type="radio" name="q56" value="B" data-correct="false"> Calcium channel blocker</label>
+      <label><input type="radio" name="q56" value="C" data-correct="true"> Angiotensin‑converting enzyme inhibitor (ACE‑I) or angiotensin receptor blocker (ARB)</label>
+      <label><input type="radio" name="q56" value="D" data-correct="false"> Loop diuretic</label>
+    </div>
+
+    <div class="question">
+      <p><strong>57.</strong> Uremic syndrome can lead to qualitative platelet dysfunction.  Which clinical manifestation might you observe in a patient with uremic platelet dysfunction?</p>
+      <label><input type="radio" name="q57" value="A" data-correct="false"> Thrombosis of deep veins</label>
+      <label><input type="radio" name="q57" value="B" data-correct="true"> Easy bruising and mucosal bleeding despite normal platelet count</label>
+      <label><input type="radio" name="q57" value="C" data-correct="false"> Diminished bleeding time and increased clot formation</label>
+      <label><input type="radio" name="q57" value="D" data-correct="false"> Severe thrombocytopenia on complete blood count</label>
+    </div>
+
+    <!-- Miscellaneous topics -->
+    <div class="question">
+      <p><strong>58.</strong> Live attenuated vaccines are generally contraindicated in patients with severe immunodeficiency.  Which of the following vaccines is live attenuated and should be avoided in a patient on high‑dose systemic steroids?</p>
+      <label><input type="radio" name="q58" value="A" data-correct="true"> Varicella (chickenpox) vaccine</label>
+      <label><input type="radio" name="q58" value="B" data-correct="false"> Inactivated influenza vaccine</label>
+      <label><input type="radio" name="q58" value="C" data-correct="false"> Pneumococcal polysaccharide vaccine</label>
+      <label><input type="radio" name="q58" value="D" data-correct="false"> Hepatitis B vaccine</label>
+    </div>
+
+    <div class="question">
+      <p><strong>59.</strong> In obstructive lung disease, the FEV<sub>1</sub>/FVC ratio is decreased.  The Global Initiative for Chronic Obstructive Lung Disease (GOLD) grading system categorizes COPD severity based on post‑bronchodilator FEV<sub>1</sub>.  Which GOLD grade corresponds to FEV<sub>1</sub> &lt;30% of predicted?</p>
+      <label><input type="radio" name="q59" value="A" data-correct="false"> GOLD 1 (mild)</label>
+      <label><input type="radio" name="q59" value="B" data-correct="false"> GOLD 2 (moderate)</label>
+      <label><input type="radio" name="q59" value="C" data-correct="false"> GOLD 3 (severe)</label>
+      <label><input type="radio" name="q59" value="D" data-correct="true"> GOLD 4 (very severe)</label>
+    </div>
+
+    <div class="question">
+      <p><strong>60.</strong> In the mechanics of breathing, the diaphragm is the primary muscle of inspiration.  Which nerve innervates the diaphragm?</p>
+      <label><input type="radio" name="q60" value="A" data-correct="false"> Vagus nerve (cranial nerve X)</label>
+      <label><input type="radio" name="q60" value="B" data-correct="false"> Accessory nerve (cranial nerve XI)</label>
+      <label><input type="radio" name="q60" value="C" data-correct="false"> Spinal accessory nerve (C1–C2)</label>
+      <label><input type="radio" name="q60" value="D" data-correct="true"> Phrenic nerve (C3–C5)</label>
+    </div>
+
+    <div class="question">
+      <p><strong>61.</strong> Chronic obstructive pulmonary disease (COPD) includes emphysema and chronic bronchitis.  Which of the following medications has been shown to improve survival in COPD patients with resting hypoxemia?</p>
+      <label><input type="radio" name="q61" value="A" data-correct="false"> Inhaled corticosteroid alone</label>
+      <label><input type="radio" name="q61" value="B" data-correct="true"> Long‑term supplemental oxygen therapy</label>
+      <label><input type="radio" name="q61" value="C" data-correct="false"> Oral anticholinergic therapy</label>
+      <label><input type="radio" name="q61" value="D" data-correct="false"> Short‑acting beta agonist as needed</label>
+    </div>
+
+    <div class="question">
+      <p><strong>62.</strong> A 58‑year‑old man presents with dyspnea and chest discomfort.  He has a history of hypertension, diabetes and hyperlipidemia.  Which combination of risk factors for coronary artery disease is considered modifiable?</p>
+      <label><input type="radio" name="q62" value="A" data-correct="false"> Age, male sex and family history</label>
+      <label><input type="radio" name="q62" value="B" data-correct="false"> Genetics and ethnicity</label>
+      <label><input type="radio" name="q62" value="C" data-correct="true"> Smoking, hypertension, hyperlipidemia and diabetes mellitus</label>
+      <label><input type="radio" name="q62" value="D" data-correct="false"> Male sex, family history and height</label>
+    </div>
+
+    <div class="question">
+      <p><strong>63.</strong> A patient with a history of stable angina reports chest pain with exertion that resolves with rest.  Which medication works by decreasing heart rate and contractility to reduce myocardial oxygen demand?</p>
+      <label><input type="radio" name="q63" value="A" data-correct="false"> Sublingual nitroglycerin</label>
+      <label><input type="radio" name="q63" value="B" data-correct="false"> Aspirin</label>
+      <label><input type="radio" name="q63" value="C" data-correct="false"> ACE inhibitor</label>
+      <label><input type="radio" name="q63" value="D" data-correct="true"> Beta‑adrenergic blocker</label>
+    </div>
+
+    <div class="question">
+      <p><strong>64.</strong> Which condition is defined by episodic narrowing of coronary arteries without total occlusion, causing chest discomfort that occurs at rest and is due to transient vasospasm rather than atherosclerotic plaque rupture?</p>
+      <label><input type="radio" name="q64" value="A" data-correct="true"> Prinzmetal (variant) angina</label>
+      <label><input type="radio" name="q64" value="B" data-correct="false"> Stable angina</label>
+      <label><input type="radio" name="q64" value="C" data-correct="false"> Unstable angina</label>
+      <label><input type="radio" name="q64" value="D" data-correct="false"> Non‑ST‑elevation myocardial infarction</label>
+    </div>
+
+    <div class="question">
+      <p><strong>65.</strong> A 65‑year‑old woman develops sudden, sharp chest pain and dyspnea.  EKG shows diffuse ST‑segment elevations and PR‑segment depressions.  Physical examination reveals a pericardial friction rub.  Which condition is most likely responsible for these findings?</p>
+      <label><input type="radio" name="q65" value="A" data-correct="false"> Pulmonary embolism</label>
+      <label><input type="radio" name="q65" value="B" data-correct="false"> Stable angina</label>
+      <label><input type="radio" name="q65" value="C" data-correct="true"> Uremic pericarditis due to end‑stage renal disease</label>
+      <label><input type="radio" name="q65" value="D" data-correct="false"> Aortic dissection</label>
+    </div>
+
+    <div class="question">
+      <p><strong>66.</strong> Which of the following is a classic clinical triad of right‑sided heart failure?</p>
+      <label><input type="radio" name="q66" value="A" data-correct="false"> Dyspnea on exertion, orthopnea and paroxysmal nocturnal dyspnea</label>
+      <label><input type="radio" name="q66" value="B" data-correct="true"> Peripheral edema, hepatomegaly and jugular venous distension</label>
+      <label><input type="radio" name="q66" value="C" data-correct="false"> Exertional chest pain, diaphoresis and nausea</label>
+      <label><input type="radio" name="q66" value="D" data-correct="false"> Retrosternal burning, hoarseness and odynophagia</label>
+    </div>
+
+    <div class="question">
+      <p><strong>67.</strong> Which laboratory test is used to differentiate between folate deficiency and vitamin B<sub>12</sub> deficiency as the cause of a macrocytic anemia?</p>
+      <label><input type="radio" name="q67" value="A" data-correct="false"> Serum ferritin level</label>
+      <label><input type="radio" name="q67" value="B" data-correct="false"> Hemoglobin electrophoresis</label>
+      <label><input type="radio" name="q67" value="C" data-correct="true"> Methylmalonic acid level (elevated in B<sub>12</sub> deficiency but normal in folate deficiency)</label>
+      <label><input type="radio" name="q67" value="D" data-correct="false"> Serum lactate dehydrogenase level</label>
+    </div>
+
+    <div class="question">
+      <p><strong>68.</strong> Which of the following physical findings is most consistent with severe left ventricular systolic dysfunction?</p>
+      <label><input type="radio" name="q68" value="A" data-correct="true"> Displaced apical impulse and presence of an S<sub>3</sub> gallop</label>
+      <label><input type="radio" name="q68" value="B" data-correct="false"> Fixed splitting of S<sub>2</sub></label>
+      <label><input type="radio" name="q68" value="C" data-correct="false"> Loud S<sub>1</sub> with an opening snap</label>
+      <label><input type="radio" name="q68" value="D" data-correct="false"> Crescendo–decrescendo systolic murmur radiating to carotids</label>
+    </div>
+
+    <div class="question">
+      <p><strong>69.</strong> A man with a history of chronic alcohol use develops a macrocytic anemia but has normal methylmalonic acid levels.  Which vitamin deficiency is most likely?</p>
+      <label><input type="radio" name="q69" value="A" data-correct="false"> Vitamin B<sub>12</sub> deficiency</label>
+      <label><input type="radio" name="q69" value="B" data-correct="true"> Folate deficiency</label>
+      <label><input type="radio" name="q69" value="C" data-correct="false"> Iron deficiency</label>
+      <label><input type="radio" name="q69" value="D" data-correct="false"> Vitamin C deficiency</label>
+    </div>
+
+    <div class="question">
+      <p><strong>70.</strong> A 30‑year‑old woman presents with malar rash, photosensitivity, arthritis and proteinuria.  Which treatment is considered the foundation of therapy for systemic lupus erythematosus (SLE) and should be used long‑term to reduce flares?</p>
+      <label><input type="radio" name="q70" value="A" data-correct="false"> High‑dose corticosteroids alone</label>
+      <label><input type="radio" name="q70" value="B" data-correct="true"> Hydroxychloroquine (antimalarial) therapy</label>
+      <label><input type="radio" name="q70" value="C" data-correct="false"> Cyclophosphamide only</label>
+      <label><input type="radio" name="q70" value="D" data-correct="false"> None—there is no long‑term maintenance therapy</label>
+    </div>
+
+    <div class="question">
+      <p><strong>71.</strong> Which of the following is a feature of alloimmune hemolytic disease of the newborn (erythroblastosis fetalis)?</p>
+      <label><input type="radio" name="q71" value="A" data-correct="false"> Maternal IgM antibodies against Rh antigens cross the placenta</label>
+      <label><input type="radio" name="q71" value="B" data-correct="true"> Maternal anti‑Rh(D) IgG antibodies cross the placenta and destroy fetal red cells</label>
+      <label><input type="radio" name="q71" value="C" data-correct="false"> It is prevented by giving Rh‑positive mothers anti‑D immunoglobulin</label>
+      <label><input type="radio" name="q71" value="D" data-correct="false"> It is mediated by T‑cell cytotoxicity without antibody involvement</label>
+    </div>
+
+    <div class="question">
+      <p><strong>72.</strong> Which of the following vaccines should generally be deferred in patients receiving potent immunosuppressive therapy for severe lupus nephritis?</p>
+      <label><input type="radio" name="q72" value="A" data-correct="false"> Inactivated influenza vaccine</label>
+      <label><input type="radio" name="q72" value="B" data-correct="true"> Live attenuated measles, mumps and rubella (MMR) vaccine</label>
+      <label><input type="radio" name="q72" value="C" data-correct="false"> Pneumococcal conjugate vaccine</label>
+      <label><input type="radio" name="q72" value="D" data-correct="false"> Hepatitis B vaccine</label>
+    </div>
+
+    <div class="question">
+      <p><strong>73.</strong> Which lab test is useful for monitoring disease activity in systemic lupus erythematosus because levels tend to decrease during flares due to consumption?</p>
+      <label><input type="radio" name="q73" value="A" data-correct="true"> Complement levels (C3 and C4)</label>
+      <label><input type="radio" name="q73" value="B" data-correct="false"> Serum ferritin</label>
+      <label><input type="radio" name="q73" value="C" data-correct="false"> Serum potassium</label>
+      <label><input type="radio" name="q73" value="D" data-correct="false"> Uric acid level</label>
+    </div>
+
+    <div class="question">
+      <p><strong>74.</strong> A patient with advanced chronic kidney disease presents with fatigue, pallor and dyspnea on exertion.  Lab tests reveal normocytic anemia.  Which therapy addresses the underlying cause of anemia in this patient?</p>
+      <label><input type="radio" name="q74" value="A" data-correct="false"> High‑dose iron supplementation alone</label>
+      <label><input type="radio" name="q74" value="B" data-correct="false"> Vitamin B<sub>12</sub> injections</label>
+      <label><input type="radio" name="q74" value="C" data-correct="true"> Erythropoiesis‑stimulating agent (recombinant EPO) plus iron supplementation</label>
+      <label><input type="radio" name="q74" value="D" data-correct="false"> Chemotherapy</label>
+    </div>
+
+    <div class="question">
+      <p><strong>75.</strong> A 35‑year‑old woman presents with recurrent urinary tract infections and is diagnosed with vesicoureteral reflux causing chronic pyelonephritis.  Chronic inflammatory injury to the renal interstitium can lead to which type of renal failure?</p>
+      <label><input type="radio" name="q75" value="A" data-correct="false"> Prerenal azotemia</label>
+      <label><input type="radio" name="q75" value="B" data-correct="true"> Intrinsic renal failure due to tubulointerstitial damage</label>
+      <label><input type="radio" name="q75" value="C" data-correct="false"> Postrenal failure due to bilateral obstruction</label>
+      <label><input type="radio" name="q75" value="D" data-correct="false"> Hematuria without renal impairment</label>
+    </div>
+
+    <div class="question">
+      <p><strong>76.</strong> In chronic kidney disease, hyperphosphatemia and hypocalcemia stimulate parathyroid hormone (PTH) secretion, leading to secondary hyperparathyroidism.  Which medication can help control secondary hyperparathyroidism by binding dietary phosphate in the gut?</p>
+      <label><input type="radio" name="q76" value="A" data-correct="false"> Loop diuretic</label>
+      <label><input type="radio" name="q76" value="B" data-correct="false"> Thiazide diuretic</label>
+      <label><input type="radio" name="q76" value="C" data-correct="true"> Phosphate binder such as sevelamer</label>
+      <label><input type="radio" name="q76" value="D" data-correct="false"> ACE inhibitor</label>
+    </div>
+
+    <div class="question">
+      <p><strong>77.</strong> Which of the following heart sound changes is typically heard in a patient with longstanding hypertension and concentric left ventricular hypertrophy but preserved ejection fraction?</p>
+      <label><input type="radio" name="q77" value="A" data-correct="false"> Loud S<sub>3</sub> gallop</label>
+      <label><input type="radio" name="q77" value="B" data-correct="true"> S<sub>4</sub> sound due to stiff ventricular wall during atrial contraction</label>
+      <label><input type="radio" name="q77" value="C" data-correct="false"> Wide split S<sub>2</sub> without respiratory variation</label>
+      <label><input type="radio" name="q77" value="D" data-correct="false"> Continuous machine‑like murmur</label>
+    </div>
+
+    <div class="question">
+      <p><strong>78.</strong> Which antihypertensive medication is contraindicated in pregnancy due to risk of fetal renal agenesis and should be avoided in women of childbearing age who might conceive?</p>
+      <label><input type="radio" name="q78" value="A" data-correct="false"> Methyldopa</label>
+      <label><input type="radio" name="q78" value="B" data-correct="false"> Labetalol</label>
+      <label><input type="radio" name="q78" value="C" data-correct="true"> ACE inhibitors and ARBs</label>
+      <label><input type="radio" name="q78" value="D" data-correct="false"> Hydralazine</label>
+    </div>
+
+    <div class="question">
+      <p><strong>79.</strong> In anemia of chronic disease, which of the following serum lab patterns is most typical?</p>
+      <label><input type="radio" name="q79" value="A" data-correct="false"> Decreased ferritin, increased total iron‑binding capacity (TIBC)</label>
+      <label><input type="radio" name="q79" value="B" data-correct="true"> Increased ferritin, decreased TIBC and low serum iron</label>
+      <label><input type="radio" name="q79" value="C" data-correct="false"> Normal ferritin, normal TIBC and high serum iron</label>
+      <label><input type="radio" name="q79" value="D" data-correct="false"> Decreased ferritin and decreased TIBC</label>
+    </div>
+
+    <div class="question">
+      <p><strong>80.</strong> Which condition is characterized by inappropriate activation of T cells against pancreatic β cells, leading to insulin deficiency?</p>
+      <label><input type="radio" name="q80" value="A" data-correct="false"> Type II (IgM‑mediated) hypersensitivity</label>
+      <label><input type="radio" name="q80" value="B" data-correct="true"> Type I diabetes mellitus as a type IV hypersensitivity reaction</label>
+      <label><input type="radio" name="q80" value="C" data-correct="false"> Myasthenia gravis</label>
+      <label><input type="radio" name="q80" value="D" data-correct="false"> Graves’ disease</label>
+    </div>
+
+    <div class="question">
+      <p><strong>81.</strong> Which of the following best defines heart failure with preserved ejection fraction (HFpEF)?</p>
+      <label><input type="radio" name="q81" value="A" data-correct="false"> Reduced ejection fraction &lt;40% with ventricular dilation</label>
+      <label><input type="radio" name="q81" value="B" data-correct="true"> Normal ejection fraction ≥50% but impaired ventricular relaxation causing high filling pressures</label>
+      <label><input type="radio" name="q81" value="C" data-correct="false"> Increased ejection fraction &gt;70% with hypertrophic cardiomyopathy</label>
+      <label><input type="radio" name="q81" value="D" data-correct="false"> Right ventricular failure with tricuspid regurgitation</label>
+    </div>
+
+    <div class="question">
+      <p><strong>82.</strong> Which of the following is a common early sign of chronic obstructive pulmonary disease (COPD) due to chronic bronchitis?</p>
+      <label><input type="radio" name="q82" value="A" data-correct="false"> Finger clubbing</label>
+      <label><input type="radio" name="q82" value="B" data-correct="false"> Exophthalmos</label>
+      <label><input type="radio" name="q82" value="C" data-correct="true"> Chronic productive cough with sputum production</label>
+      <label><input type="radio" name="q82" value="D" data-correct="false"> Severe weight loss and cachexia</label>
+    </div>
+
+    <div class="question">
+      <p><strong>83.</strong> Which immunoglobulin class mediates type I hypersensitivity reactions such as allergic rhinitis and anaphylaxis?</p>
+      <label><input type="radio" name="q83" value="A" data-correct="false"> IgA</label>
+      <label><input type="radio" name="q83" value="B" data-correct="true"> IgE</label>
+      <label><input type="radio" name="q83" value="C" data-correct="false"> IgG</label>
+      <label><input type="radio" name="q83" value="D" data-correct="false"> IgM</label>
+    </div>
+
+    <div class="question">
+      <p><strong>84.</strong> Which of the following best describes the mechanism by which poststreptococcal glomerulonephritis develops weeks after a streptococcal throat infection?</p>
+      <label><input type="radio" name="q84" value="A" data-correct="false"> Anti‑TSH receptor antibodies stimulate thyroid hormone production</label>
+      <label><input type="radio" name="q84" value="B" data-correct="false"> Direct invasion of kidney by streptococcal bacteria</label>
+      <label><input type="radio" name="q84" value="C" data-correct="true"> Deposition of immune complexes containing streptococcal antigens in the glomeruli triggering complement activation (type III hypersensitivity)</label>
+      <label><input type="radio" name="q84" value="D" data-correct="false"> Cytotoxic T‑cell attack on renal tubular cells</label>
+    </div>
+
+    <div class="question">
+      <p><strong>85.</strong> Which of the following is a characteristic manifestation of nephritic syndrome?</p>
+      <label><input type="radio" name="q85" value="A" data-correct="false"> Heavy proteinuria &gt;3.5 g/day and generalized edema</label>
+      <label><input type="radio" name="q85" value="B" data-correct="true"> Hematuria with red blood cell casts, mild proteinuria and hypertension</label>
+      <label><input type="radio" name="q85" value="C" data-correct="false"> Dilute urine with polyuria and polydipsia</label>
+      <label><input type="radio" name="q85" value="D" data-correct="false"> Hypercalcemia and renal stones</label>
+    </div>
+
+    <div class="question">
+      <p><strong>86.</strong> Graft‑versus‑host disease (GVHD) occurs when donor T cells attack recipient tissues after bone marrow transplant.  Which organ systems are most commonly affected in acute GVHD?</p>
+      <label><input type="radio" name="q86" value="A" data-correct="false"> Brain and spinal cord</label>
+      <label><input type="radio" name="q86" value="B" data-correct="true"> Skin, liver and gastrointestinal tract</label>
+      <label><input type="radio" name="q86" value="C" data-correct="false"> Thyroid and parathyroids</label>
+      <label><input type="radio" name="q86" value="D" data-correct="false"> Prostate and testes</label>
+    </div>
+
+    <div class="question">
+      <p><strong>87.</strong> Which laboratory test is used to diagnose autoimmune hemolytic anemia mediated by IgG or IgM antibodies coating red blood cells?</p>
+      <label><input type="radio" name="q87" value="A" data-correct="false"> Prothrombin time (PT)</label>
+      <label><input type="radio" name="q87" value="B" data-correct="false"> Bone marrow biopsy</label>
+      <label><input type="radio" name="q87" value="C" data-correct="true"> Direct Coombs test (direct antiglobulin test)</label>
+      <label><input type="radio" name="q87" value="D" data-correct="false"> Serum sodium level</label>
+    </div>
+
+    <div class="question">
+      <p><strong>88.</strong> Which of the following is a potential adverse effect of long‑term high‑dose corticosteroid therapy for autoimmune conditions?</p>
+      <label><input type="radio" name="q88" value="A" data-correct="false"> Hypoglycemia and weight loss</label>
+      <label><input type="radio" name="q88" value="B" data-correct="false"> Increased bone density</label>
+      <label><input type="radio" name="q88" value="C" data-correct="true"> Osteoporosis, hyperglycemia and increased infection risk</label>
+      <label><input type="radio" name="q88" value="D" data-correct="false"> Permanent cure of autoimmune disease without relapse</label>
+    </div>
+
+    <div class="question">
+      <p><strong>89.</strong> Which of the following describes a key difference between HDL and LDL cholesterol?</p>
+      <label><input type="radio" name="q89" value="A" data-correct="false"> LDL transports cholesterol from tissues to the liver, whereas HDL delivers it to tissues</label>
+      <label><input type="radio" name="q89" value="B" data-correct="true"> HDL participates in reverse cholesterol transport, carrying cholesterol back to the liver, whereas LDL delivers cholesterol to peripheral tissues</label>
+      <label><input type="radio" name="q89" value="C" data-correct="false"> LDL is considered “good” cholesterol and HDL “bad”</label>
+      <label><input type="radio" name="q89" value="D" data-correct="false"> There is no functional difference between LDL and HDL</label>
+    </div>
+
+    <div class="question">
+      <p><strong>90.</strong> A man is found to have a total cholesterol level of 230 mg/dL and LDL of 150 mg/dL.  According to standard adult cholesterol guidelines, these values would be classified as:</p>
+      <label><input type="radio" name="q90" value="A" data-correct="false"> Desirable total cholesterol and optimal LDL</label>
+      <label><input type="radio" name="q90" value="B" data-correct="true"> Borderline high total cholesterol and borderline high LDL</label>
+      <label><input type="radio" name="q90" value="C" data-correct="false"> High total cholesterol and very high LDL</label>
+      <label><input type="radio" name="q90" value="D" data-correct="false"> Low cholesterol levels</label>
+    </div>
+
+    <div class="question">
+      <p><strong>91.</strong> Which of the following signs and symptoms indicates worsening right‑sided heart failure with systemic venous congestion?</p>
+      <label><input type="radio" name="q91" value="A" data-correct="false"> Orthopnea and pulmonary crackles</label>
+      <label><input type="radio" name="q91" value="B" data-correct="false"> Syncope during exertion</label>
+      <label><input type="radio" name="q91" value="C" data-correct="true"> Increasing peripheral edema and ascites</label>
+      <label><input type="radio" name="q91" value="D" data-correct="false"> Hyperthyroidism and weight loss</label>
+    </div>
+
+    <div class="question">
+      <p><strong>92.</strong> A 50‑year‑old man with a history of rheumatic fever as a child presents with exertional dyspnea.  On auscultation, an opening snap followed by a diastolic rumbling murmur is heard at the apex.  Which heart valve is most likely affected?</p>
+      <label><input type="radio" name="q92" value="A" data-correct="false"> Aortic valve</label>
+      <label><input type="radio" name="q92" value="B" data-correct="false"> Pulmonic valve</label>
+      <label><input type="radio" name="q92" value="C" data-correct="false"> Tricuspid valve</label>
+      <label><input type="radio" name="q92" value="D" data-correct="true"> Mitral valve (mitral stenosis)</label>
+    </div>
+
+    <div class="question">
+      <p><strong>93.</strong> Which of the following interventions is most appropriate for a patient with acute pulmonary edema due to heart failure exacerbation?</p>
+      <label><input type="radio" name="q93" value="A" data-correct="false"> Administer a large fluid bolus to improve renal perfusion</label>
+      <label><input type="radio" name="q93" value="B" data-correct="true"> Give supplemental oxygen, loop diuretic and consider nitrates to reduce preload</label>
+      <label><input type="radio" name="q93" value="C" data-correct="false"> Immediately start high‑dose beta blocker</label>
+      <label><input type="radio" name="q93" value="D" data-correct="false"> Withhold all medications and observe</label>
+    </div>
+
+    <div class="question">
+      <p><strong>94.</strong> Which of the following is a common trigger of asthma exacerbations that should be addressed in patient education?</p>
+      <label><input type="radio" name="q94" value="A" data-correct="false"> Reduction in salt intake</label>
+      <label><input type="radio" name="q94" value="B" data-correct="false"> Increased dietary fiber</label>
+      <label><input type="radio" name="q94" value="C" data-correct="true"> Exposure to allergens such as dust mites, pollen, pet dander or cold air</label>
+      <label><input type="radio" name="q94" value="D" data-correct="false"> Daily aspirin therapy for all asthma patients</label>
+    </div>
+
+    <div class="question">
+      <p><strong>95.</strong> A 60‑year‑old man with diabetes, hypertension and hyperlipidemia presents with severe epigastric pain radiating to the back.  Serum amylase and lipase are elevated.  Which cardiac risk factor is also strongly associated with pancreatitis caused by hypertriglyceridemia?</p>
+      <label><input type="radio" name="q95" value="A" data-correct="true"> Very high serum triglycerides (&gt;1000 mg/dL)</label>
+      <label><input type="radio" name="q95" value="B" data-correct="false"> Low HDL cholesterol</label>
+      <label><input type="radio" name="q95" value="C" data-correct="false"> High LDL cholesterol</label>
+      <label><input type="radio" name="q95" value="D" data-correct="false"> Elevated ApoA1 levels</label>
+    </div>
+
+    <div class="question">
+      <p><strong>96.</strong> In obstructive lung disease such as COPD, which of the following changes in lung volumes is typically seen?</p>
+      <label><input type="radio" name="q96" value="A" data-correct="false"> Decreased residual volume and total lung capacity</label>
+      <label><input type="radio" name="q96" value="B" data-correct="true"> Increased residual volume and total lung capacity due to air trapping</label>
+      <label><input type="radio" name="q96" value="C" data-correct="false"> Normal residual volume with decreased total lung capacity</label>
+      <label><input type="radio" name="q96" value="D" data-correct="false"> Reduced residual volume with increased vital capacity</label>
+    </div>
+
+    <div class="question">
+      <p><strong>97.</strong> A patient with nephrotic syndrome due to diabetes mellitus develops hyperlipidemia.  Which mechanism contributes to hyperlipidemia in nephrotic syndrome?</p>
+      <label><input type="radio" name="q97" value="A" data-correct="false"> Increased catabolism of lipoproteins by the liver</label>
+      <label><input type="radio" name="q97" value="B" data-correct="true"> Increased hepatic synthesis of lipoproteins in response to low oncotic pressure</label>
+      <label><input type="radio" name="q97" value="C" data-correct="false"> Decreased absorption of dietary fats</label>
+      <label><input type="radio" name="q97" value="D" data-correct="false"> Increased clearance of LDL by LDL receptors</label>
+    </div>
+
+    <div class="question">
+      <p><strong>98.</strong> A young woman develops hematuria and flank pain.  Ultrasound shows multiple bilateral renal cysts.  Her father died from a ruptured cerebral aneurysm.  What is the most likely diagnosis?</p>
+      <label><input type="radio" name="q98" value="A" data-correct="true"> Autosomal dominant polycystic kidney disease</label>
+      <label><input type="radio" name="q98" value="B" data-correct="false"> Autosomal recessive polycystic kidney disease</label>
+      <label><input type="radio" name="q98" value="C" data-correct="false"> Renal cell carcinoma</label>
+      <label><input type="radio" name="q98" value="D" data-correct="false"> Hydronephrosis due to obstruction</label>
+    </div>
+
+    <div class="question">
+      <p><strong>99.</strong> A man presents with painless hematuria.  Urinalysis shows red blood cell casts.  This finding is most consistent with which of the following?</p>
+      <label><input type="radio" name="q99" value="A" data-correct="false"> Cystitis</label>
+      <label><input type="radio" name="q99" value="B" data-correct="true"> Glomerular disease such as glomerulonephritis</label>
+      <label><input type="radio" name="q99" value="C" data-correct="false"> Nephrolithiasis</label>
+      <label><input type="radio" name="q99" value="D" data-correct="false"> Benign prostatic hyperplasia</label>
+    </div>
+
+    <div class="question">
+      <p><strong>100.</strong> Which of the following best describes the pathophysiology of anemia in chronic kidney disease?</p>
+      <label><input type="radio" name="q100" value="A" data-correct="false"> Excessive erythropoietin production by damaged kidneys</label>
+      <label><input type="radio" name="q100" value="B" data-correct="false"> Increased production of red blood cells by the bone marrow</label>
+      <label><input type="radio" name="q100" value="C" data-correct="true"> Decreased production of erythropoietin by the failing kidneys leading to reduced RBC synthesis</label>
+      <label><input type="radio" name="q100" value="D" data-correct="false"> Autoimmune destruction of red cell precursors</label>
+    </div>
+
+  </div><!-- end exam -->
+
+  <button id="submit">Submit Answers</button>
+  <div id="result"></div>
+
+  <script>
+    // Script to evaluate answers and display feedback
+    document.getElementById('submit').addEventListener('click', function() {
+      var questions = document.querySelectorAll('#exam .question');
+      var score = 0;
+      // Iterate through questions
+      questions.forEach(function(q) {
+        var selected = q.querySelector('input[type="radio"]:checked');
+        var options = q.querySelectorAll('input[type="radio"]');
+        // Remove any previous highlighting
+        options.forEach(function(opt) {
+          var label = opt.parentNode;
+          label.classList.remove('correct', 'incorrect');
+        });
+        if (selected && selected.getAttribute('data-correct') === 'true') {
+          score++;
+        }
+        // Highlight all correct answers and mark incorrectly selected ones
+        options.forEach(function(opt) {
+          var label = opt.parentNode;
+          if (opt.getAttribute('data-correct') === 'true') {
+            label.classList.add('correct');
+          } else if (opt.checked) {
+            label.classList.add('incorrect');
+          }
+          // Disable options after submission
+          opt.disabled = true;
+        });
+      });
+      var total = questions.length;
+      var percentage = Math.round((score / total) * 100);
+      document.getElementById('result').textContent = 'You scored ' + score + ' out of ' + total + ' (' + percentage + '%).';
+      // Disable the submit button to prevent resubmission
+      document.getElementById('submit').disabled = true;
+    });
+  </script>
+</body>
+</html>
